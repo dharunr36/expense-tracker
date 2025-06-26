@@ -1,0 +1,160 @@
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.app-container {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  background: #000000;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+main {
+  background-color: #ffffff;
+  margin: 12px 20px 100px 20px; /* space for footer */
+  border-radius: 6px;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  padding: 20px 24px 0 24px;
+  flex-grow: 1;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 18px;
+  margin: 0 0 16px 0;
+}
+
+.transactions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+}
+
+.card {
+  background: #f3f3f3;
+  border-radius: 16px;
+  box-shadow: 0 0 0 0 transparent;
+  width: calc((100% - 48px) / 3);
+  min-width: 220px;
+  padding: 16px 20px 20px 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .category {
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 6px;
+}
+
+.card .amount {
+  font-weight: 700;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.card .date {
+  font-weight: 400;
+  font-size: 13px;
+  background-color: #f3f3f3;
+}
+
+.icon-top-right {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 16px;
+  color: #000000;
+}
+footer {
+  background: #ffffff;
+  margin-right: 0px;
+  padding-right: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #000;
+  
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+footer .left {
+  font-weight: 400;
+}
+
+footer .right {
+  display: flex;
+  gap: 16px;
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media (max-width: 600px) {
+  header {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  nav {
+    width: 100%;
+    justify-content: space-around;
+    gap: 0;
+    font-size: 13px;
+  }
+  .card {
+    width: 100%;
+  }
+  main {
+    margin: 12px 12px 100px 12px;
+  }
+  footer {
+    flex-direction: column;
+    gap: 8px;
+    font-size: 11px;
+    padding: 12px 12px;
+  }
+  footer .right {
+    justify-content: center;
+    gap: 12px;
+  }
+}
