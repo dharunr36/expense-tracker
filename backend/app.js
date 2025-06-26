@@ -16,18 +16,11 @@ const port = process.env.PORT;
 
 connectDB();
 
-const allowedOrigins = [
-  "http://localhost:3000"
-];
 
 // Middleware
 app.use(express.json());
 app.use(
-  cors({
-    origin: allowedOrigins,
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE"],
-  })
+  cors()
 );
 app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
